@@ -42,25 +42,12 @@ Pred1var <- MSE1*diag(P1%*%solve(t(D1)%*%D1)%*%t(P1))
 LCL1 <- pred2 - 1.96*sqrt(Pred1var)
 UCL1 <- pred2 + 1.96*sqrt(Pred1var)
 
-# Dates for predicted values, with given "n2":
-#
-# We want to create a large enough sample to begin filtering out
-#    weekends and holidays observed during the week.
-#
-# Adequate sample size for array of dates to manipulate "n2" dates
-#    from is:    2*(n2) + 9 + 1
-#       "2*(n2)" - if the day is a weekday (keep) or if day is a weekend (omit, about 2/7 of 2*n2)
-#       " + 9"   - each year there are 9 holidays observed during the week (omit up to max. of 9)
-#       " + 1"   - begin indexing after last recorded day in data1.
-
 date2 <- seq(as.Date(data1$Date[n1]+1),
              as.Date(data1$Date[n1]+(n2*2+9)+1), by = 1)
 
 # Filter out Weekends:
 date2 <- date2[!weekdays(date2) %in% c("Saturday", "Sunday")]
 
-
-# Dates gathered from: "https://www.nasdaq.com/market-activity/2022-stock-market-holiday-calendar#:~:text=US%20Stock%20Market%20Holidays%20Hours%20%20%20,May%2030%2C%202022%20%206%20more%20rows%20"
 holidays2022 <- as.Date(c("2022-01-17",     # MLK Jr. Day
                           "2022-02-21",     # Pres.'s Day
                           "2022-04-15",     # Good Friday
@@ -74,7 +61,7 @@ date2 <- date2[!date2 %in% holidays2022]
 
 # Keep only "n2" values that we wish to predict
 date2 <- date2[1:n2]
-# All weekends, and Labor Day, are excluded for next n2 = 25 days
+# All weekends, and Labor Day, are excluded for next n2 = 25 days.
 
 pred_last1<- date2[n2] # last predicted day
 
