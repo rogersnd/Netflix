@@ -37,7 +37,7 @@ We want to create a large enough sample, an array of dates we call **date2**, so
 
 Adequate sample size for array of dates to manipulate *n<sub>2</sub>* dates from is **2\**n<sub>2</sub>* + 9 + 1**.  
      
-  - *2\*n<sub>2</sub>* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: if the day is a weekday *(keep)* or if day is a weekend *(omit about 2/7 of 2\*n<sub>2</sub>)*.  
+  - *2\*n<sub>2</sub>* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: if the day is a weekday *(keep)* or if day is a weekend *(omit about 2/7 of 2\*n<sub>2</sub>)*.  
 
 ###### For this simulation, we will be choosing ***n<sub>2</sub>* = 25**.  
 
