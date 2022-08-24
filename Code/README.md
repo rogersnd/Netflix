@@ -28,7 +28,6 @@ Rate of Return, **R<sub>*i*</sub>**, is defined as:
 This code performs a time series analysis on daily rates of return for Netflix Stock.  
 
 Also, we will be predicting the next ***n<sub>2</sub>*** stock prices' rates of return.  
-<<<<<<< HEAD
 
 ###### For this simulation, we will be choosing ***n<sub>2</sub>* = 25**.  
 
@@ -39,7 +38,6 @@ We want to create a large enough sample, an array of dates we call **date2**, so
 Adequate sample size for array of dates to manipulate *n<sub>2</sub>* dates from is **2\**n<sub>2</sub>* + 9 + 1**.  
      
   - *2\*n<sub>2</sub>* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: if the day is a weekday *(keep)* or if day is a weekend *(omit about 2/7 of 2\*n<sub>2</sub>)*.  
-=======
 
 ###### For this simulation, we will be choosing ***n<sub>2</sub>* = 25**.  
 
@@ -50,7 +48,6 @@ We want to create a large enough sample, an array of dates we call **date2**, so
 Adequate sample size for array of dates to manipulate *n<sub>2</sub>* dates from is **2\**n<sub>2</sub>* + 9 + 1**.  
      
   - *2\*n<sub>2</sub>* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: if the day is a weekday *(keep)* or if day is a weekend *(omit about 2/7 of 2\*n<sub>2</sub>)*.  
->>>>>>> 04e194bb3bed49457bf295788bcb89842e0bda2a
 
   - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*+ 9*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   : each year there are 9 holidays observed during the week *(omit up to max. of 9)*.  
 
@@ -67,7 +64,3 @@ At the end of this code, we identify the **highest and lowest future predicted r
 This code pulls all calculated findings on Netflix Stock and are published on an interactive web application, *Shiny*.  
 
 ---
-<<<<<<< HEAD
-=======
-
->>>>>>> 04e194bb3bed49457bf295788bcb89842e0bda2a
