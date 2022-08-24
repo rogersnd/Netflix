@@ -11,4 +11,4 @@ All code used to gather, calculate, visualize, and publish can be found in the *
 
 All plots generated have been saved and can be found in the **Images** folder.  
 
-The data that was calculated on the given day, Aug. 18, 2022, can be found in a saved csv file **"NFLX_raw_data.csv"**.  
+The data that was calculated on the given day, Aug. 18, 2022, can be found in a saved csv file **"NFLX_raw_data.csv"**, located in the **Raw Data** folder.  
