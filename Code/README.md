@@ -54,4 +54,3 @@ At the end of this code, we identify the **highest and lowest future predicted r
 This code pulls all calculated findings on Netflix Stock and are published on an interactive web application, *Shiny*.  
 
 ---
-
