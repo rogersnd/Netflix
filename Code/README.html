@@ -361,133 +361,88 @@ pre code {
 </div>
 
 
-&lt;!DOCTYPE html&gt;
-<html>
-<main>
-<h1 style="color:darkred">
-Netflix
-</h1>
-<p style="text-indent: 40px">
-<em>An analysis on Netflix stock</em>
+<div id="netflix" class="section level1">
+<h1>Netflix</h1>
+<blockquote>
+<p><em>An analysis on Netflix stock</em></p>
+</blockquote>
 <hr />
-</p>
-</main>
-<body>
-<h3 style="color:blue">
-<ol style="list-style-type: decimal">
-<li>NFLX_1_data.R
-</h3>
-<p>
-This code imports live data from Yahoo Finance’s website and the data is
-manipulated through selected analyses on NFLX stocks in the Nasdaq Stock
-Market, and then are visualized in plots.
-</p>
-<p style="margin-left: 40px">
-<em>Note: all libraries needed for this project are included in this R
-file.</em>
-</p></li>
-</ol>
-<h5>
-Netflix Stocks over the past year…
-</h5>
+<div id="nflx_1_data.r" class="section level3">
+<h3>1. NFLX_1_data.R</h3>
+<p>This code imports live data from Yahoo Finance’s website and the data
+is manipulated through selected analyses on NFLX stocks in the Nasdaq
+Stock Market, and then are visualized in plots.</p>
+<p><em>Note: all libraries needed for this project are included in this
+R file.</em></p>
+<div id="netflix-stocks-over-the-past-year" class="section level5">
+<h5>Netflix Stocks over the past year…</h5>
 <ul>
 <li>Source link: <a href="https://finance.yahoo.com/quote/NFLX/history?p=NFLX" title="Yahoo Finance">Yahoo Finance</a></li>
 <li>Data download link: <a href="https://query1.finance.yahoo.com/v7/finance/download/NFLX?period1=1629296203&amp;period2=1660832203&amp;interval=1d&amp;events=history&amp;includeAdjustedClose=true" title="Yahoo Finance Data">Yahoo Finance Data</a></li>
 </ul>
-<h5>
-Daily Returns.
-</h5>
-<p>
-A <strong>daily return</strong> is defined as <u>the % change of the
-closing price between two days</u>.
-</p>
-<p>
-We will denote closing price for a Netflix stock on given day, “i”, the
-initial day as P<sub><em>i</em></sub>, and P<sub><em>i-1</em></sub>
+</div>
+<div id="daily-returns." class="section level5">
+<h5>Daily Returns.</h5>
+<p>A <strong>daily return</strong> is defined as the % change of the
+closing price between two days.</p>
+<p>We will denote closing price for a Netflix stock on given day, “i”,
+the initial day as P<sub><em>i</em></sub>, and P<sub><em>i-1</em></sub>
 refers to the closing price for a Netflix stock for day before
-P<sub><em>i</em></sub>.
-</p>
-<p>
-Rate of Return, <strong>R<sub><em>i</em></sub></strong>, is defined
+P<sub><em>i</em></sub>.</p>
+<p>Rate of Return, <strong>R<sub><em>i</em></sub></strong>, is defined
 as:<br />
-
-<p style="margin-left: 40px">
 R<sub><em>i</em></sub> = (P<sub><em>i</em></sub> -
-P<sub><em>i-1</em></sub>)/(P<sub><em>i-1</em></sub>)
-</p>
+P<sub><em>i-1</em></sub>) /(P<sub><em>i-1</em></sub>)</p>
 <hr />
-<h3 style="color:blue">
-<ol start="2" style="list-style-type: decimal">
-<li>NFLX_2_time_series.R
-</h3></li>
-</ol>
-<p>
-This code performs a time series analysis on daily rates of return for
-Netflix Stock.
-</p>
-<p>
-Also, we will be predicting the next
-<strong><em>n<sub>2</sub></em></strong> stock prices’ rates of return.
-</p>
-<h6 style="text-indent: 40px">
-For this simulation, we will be choosing <strong><em>n<sub>2</sub></em>
-= 25</strong>.
-</h6>
-<p>
-We want to create a large enough sample, an array of dates we call
+</div>
+</div>
+<div id="nflx_2_time_series.r" class="section level3">
+<h3>2. NFLX_2_time_series.R</h3>
+<p>This code performs a time series analysis on daily rates of return
+for Netflix Stock.</p>
+<p>Also, we will be predicting the next
+<strong><em>n<sub>2</sub></em></strong> stock prices’ rates of
+return.</p>
+<div id="for-this-simulation-we-will-be-choosing-n2-25." class="section level6">
+<h6>For this simulation, we will be choosing
+<strong><em>n<sub>2</sub></em> = 25</strong>.</h6>
+<p>We want to create a large enough sample, an array of dates we call
 <strong>date2</strong>, so that we may filter out weekends and the
-holidays observed during the work week.
-</p>
-<h6 style="text-indent: 40px">
-From this sample, we choose <strong>25</strong>
+holidays observed during the work week.</p>
+</div>
+<div id="from-this-sample-we-choose-25-n2-dates-from-date2." class="section level6">
+<h6>From this sample, we choose <strong>25</strong>
 <em>(<strong>n<sub>2</sub></strong>)</em> dates from
-<strong>date2</strong>.
-</h6>
-<p>
-Adequate sample size for array of dates to manipulate
-<em>n<sub>2</sub></em> dates from is:
-</p>
-<h6 style="text-indent: 40px">
-<strong>2*<em>n<sub>2</sub></em> + 9 + 1.</strong>
-</h6>
-<ul style="margin-left: 40px">
-<li>
-<em>2*n<sub>2</sub></em>            : if the day is a weekday
+<strong>date2</strong>.</h6>
+<p>Adequate sample size for array of dates to manipulate
+<em>n<sub>2</sub></em> dates from is <strong>2*<em>n<sub>2</sub></em> +
+9 + 1</strong>.</p>
+<ul>
+<li><p><em>2*n<sub>2</sub></em>            : if the day is a weekday
 <em>(keep)</em> or if day is a weekend <em>(omit about 2/7 of
-2*n<sub>2</sub>)</em>.
-</li>
-<li>
-       <em>+ 9</em>      : each year there are 9 holidays observed
-during the week <em>(omit up to max. of 9)</em>.
-</li>
-<li>
-            <em>+ 1</em> : begin indexing after last recorded day in
-data1.
-</li>
+2*n<sub>2</sub>)</em>.</p></li>
+<li><p>       <em>+ 9</em>      : each year there are 9 holidays
+observed during the week <em>(omit up to max. of 9)</em>.</p></li>
+<li><p>            <em>+ 1</em> : begin indexing after last recorded day
+in data1.</p></li>
 </ul>
-<h6 style="text-indent: 40px">
-Holiday dates gathered from: <a href="%22https://www.nasdaq.com/market-activity/2022-stock-market-holiday-calendar#:~:text=US%20Stock%20Market%20Holidays%20Hours%20%20%20,May%2030%2C%202022%20%206%20more%20rows%20%22" title="Holidays">Holidays</a>
-</h6>
-<p>
-At the end of this code, we identify the <strong>highest and lowest
+</div>
+<div id="holiday-dates-gathered-from-holidays." class="section level6">
+<h6>Holiday dates gathered from <a href="%22https://www.nasdaq.com/market-activity/2022-stock-market-holiday-calendar#:~:text=US%20Stock%20Market%20Holidays%20Hours%20%20%20,May%2030%2C%202022%20%206%20more%20rows%20%22" title="Holidays">Holidays</a>.</h6>
+<p>At the end of this code, we identify the <strong>highest and lowest
 future predicted rates of return</strong> among the
 <em>n<sub>2</sub></em> predicted days and also return the corresponding
-dates.
-</p>
+dates.</p>
 <hr />
-<h3 style="color:blue">
-<ol start="3" style="list-style-type: decimal">
-<li>NFLX_3_shiny_app.R
-</h3>
-<p>
-This code pulls all calculated findings on Netflix Stock and are
-published on an interactive web application,
-<font color="lightblue"><em>Shiny</em></font>.
-</p>
+</div>
+</div>
+<div id="nflx_3_shiny_app.r" class="section level3">
+<h3>3. NFLX_3_shiny_app.R</h3>
+<p>This code pulls all calculated findings on Netflix Stock and are
+published on an interactive web application, <em>Shiny</em>.</p>
 <hr />
-</body>
-</html></li>
-</ol>
+</div>
+</div>
 
 
 
