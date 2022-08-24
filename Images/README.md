@@ -43,3 +43,25 @@ Description of Figure:
 ---
 
 **2. NFLX_time_series.R Plots**  
+
+- Plot 5: Rates of Return Across Days & Pred. Future Days  
+
+![Rates of Return Across Days & Pred. Future Days](https://github.com/rogersnd/Netflix/blob/main/Images/rates_of_return_across_days_&_pred._future_days.png)  
+
+Description of Figure:  
+
+*The previous plot extends to all "n2" predicted % rates of return.*  
+
+- Plot 6: Predicted Rates of Return Across 25 Predicted Days  
+
+![Predicted Rates of Return Across 25 Predicted Days](https://github.com/rogersnd/Netflix/blob/main/Images/predicted_rates_of_return_across_25_predicted_days.png)  
+
+Description of Figure:  
+
+*# Future 25 predicted % rates of return on average is less than previous 253 mean % rate of return*  
+
+According to plot 6, our:  
+
+- lowest predicted rate of return is **-8.07%** and is predicted to occur on **Sep. 20, 2022**.  
+
+- highest predicted rate of return is **2.25%** and is predicted to occur on **Sep. 16, 2022**.  
