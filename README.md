@@ -5,7 +5,7 @@
 
 ---
 
-This repository was made to collect live data from the internet of my choosing, manipulate the data into more interesting and useful findings, visualize those findings, and then publish said findings through using Shiny, an interactive web application.  
+With the help of R, this repository was made to collect live data from the internet of my choosing, manipulate the data into more interesting and useful findings, visualize those findings, and then publish said findings through using Shiny, an interactive web application.  
 
 All code used to gather, calculate, visualize, and publish can be found in the **Code** folder.  
 
