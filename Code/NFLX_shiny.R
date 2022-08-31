@@ -1,5 +1,8 @@
 # Author: Noah Rogers
-# Netflix Stock Prices (NFLX), part 3/3
+# Netflix Stock Prices (NFLX)
+
+source("Code/NFLX_data.R")
+source("Code/NFLX_time_series.R")
 
 # Define UI
 {

@@ -1,5 +1,7 @@
 # Author: Noah Rogers
-# Netflix Stock Prices (NFLX), part 2/3
+# Netflix Stock Prices (NFLX)
+
+source("Code/NFLX_data.R")
 
 n1 <- length(data1$Rate_of_Return)    # number of observations we have
 x1 <- 1:n1                            # x1, our index variable

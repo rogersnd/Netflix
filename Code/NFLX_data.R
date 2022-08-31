@@ -1,5 +1,5 @@
 # Author: Noah Rogers
-# Netflix Stock Prices (NFLX), part 1/3
+# Netflix Stock Prices (NFLX)
 
 # Install additional libraries (for all three parts)
 require(data.table)   # library(data.table)
