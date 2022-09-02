@@ -18,7 +18,7 @@ This code imports live data from Yahoo Finance's website and the data is manipul
 *Note: all data is stored in a new data frame called **data1**.*
 
 ##### Daily Returns.
-A **daily return** is defined as the % change of the closing price between two days.  
+A **daily return** is defined as the % change of the closing price between two days.
 
 We will denote closing price for a Netflix stock on given day, "i", the initial day as P<sub>*i*</sub>, and P<sub>*i-1*</sub> refers to the closing price for a Netflix stock for day before P<sub>*i*</sub>.  
 
